@@ -1,0 +1,8 @@
+- name: About
+  link: /
+  anchor: '#'
+  highlight: true
+- name: Publications
+  link: /
+  anchor: '#publications'
+  highlight: false

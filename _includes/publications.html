@@ -1,0 +1,41 @@
+{% assign publication_posts = site.posts | contains: 'categories', 'publications' %}
+{% if publication_posts.size > 0 %}
+<div class="row py-2">
+    <div class="col-md-12" id="publications">
+        <h2>Publications</h2>
+    </div>
+</div>
+{% for post in publication_posts %}
+<div class="row py-2">
+    <div class="col-md-2 col-sm-12" align="center">
+        <img class="project-thumbnail" src="{{site.baseurl}}/tn{{post.image}}" alt="project image" />
+    </div>
+    <div class="col-md-10 col-sm-12 project-description">
+        <h3>{{post.title}}</h3>
+        <br>
+        {{post.authors}}
+
+        <br>
+        <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
+        <br>
+        {% if post.arxiv %}
+        <a href="{{post.arxiv}}">arxiv</a> /
+        {% endif %}
+        {% if post.video %}
+        <a href="{{post.video}}">video</a> /
+        {% endif %}
+        {% if post.code %}
+        <a href="{{post.code}}">code</a> /
+        {% endif %}
+        {% if post.poster %}
+        <a href="{{post.poster}}">poster</a> /
+        {% endif %}
+        {% if post.slides %}
+        <a href="{{post.slides}}">slides</a> /
+        {% endif %}
+        <p></p>
+        {{ post.excerpt }}
+    </div>
+</div>
+{% endfor %}
+{% endif %}

@@ -1,0 +1,19 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" style="z-index:3;">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!-- TODO: Use scroll-spy -->
+            {% for item in site.data.navigation %}
+            <li class='nav-item {% if page.url == item.link and item.highlight %} active {% endif %}'>
+                <a class="nav-link" href='{{site.baseurl}}{{item.link}}{{item.anchor}}'>
+                    {{ item.name }} {% if page.url == item.link and item.highlight %}<span class="sr-only">(current)</span>{% endif %}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

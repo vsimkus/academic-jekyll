@@ -1,0 +1,140 @@
+---
+---
+
+//
+// IMPORTS
+//
+
+@import "reset";
+@import "variables";
+// Syntax highlighting @import is at the bottom of this file
+
+/**************/
+/* BASE RULES */
+/**************/
+html {
+  font-size: 1em;
+}
+
+a {
+  color: #1772d0;
+  text-decoration: none;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-display: auto;
+}
+
+a:focus,
+a:hover {
+  color: #f09228;
+  text-decoration: none;
+}
+
+p {
+  margin-block-start: $font-size-normal;
+  margin-block-end: $font-size-normal;
+}
+
+body,
+td,
+th,
+tr,
+p {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: $font-size-normal;
+  font-display: auto;
+}
+
+strong {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: $font-size-normal;
+  font-display: auto;
+}
+
+h2 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 1.75rem;
+  font-display: auto;
+  font-weight: normal;
+  padding: 0px;
+  margin: 0px;
+  display:inline; 
+}
+
+h3 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: $font-size-normal;
+  font-weight: 700;
+  font-display: auto;
+  padding: 0px;
+  margin: 0px;
+  display:inline; 
+}
+
+h1 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  font-display: auto;
+  text-align: center;
+  padding: 0px;
+  margin-block-start: 10px;
+  margin-block-end: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+}
+
+.fade {
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+span.highlight {
+  background-color: #ffffd0;
+}
+
+// Website specific
+
+#portrait {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 100%
+}
+
+.project-thumbnail {
+  width: auto; 
+  height: auto; 
+  max-width: 100%;
+
+  // @include media-breakpoint-down(sm) {
+  //   max-width: 75%;
+  // }
+}
+
+.project-description {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+body {
+  min-height: 100vh;
+}
+
+// Bootstrap-specific
+
+body {
+  div.container-fluid {
+    max-width: 1000px;
+  }
+}
+
+.font-small {
+  font-size: $font-size-small;
+}
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+//@import "highlights";
+//@import "svg-icons";
