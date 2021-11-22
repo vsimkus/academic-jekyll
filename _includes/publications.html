@@ -21,20 +21,68 @@
         <br>
         <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
         <br>
+        {% if post.page_url %}
+        <a href="{{post.page_url}}">url</a>
+        {% endif %}
+        {% if post.page_url and post.bib%}
+        /
+        {% endif %}
+        {% if post.bib %}
+        <a href="" data-toggle="modal" data-target="#publicationBibModal{{forloop.index}}">bib</a>
+        <div class="modal fade" id="publicationBibModal{{forloop.index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{post.title}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body code text-monospace">
+                    {{ post.bib | newline_to_br }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% if post.bib and post.arxiv%}
+        /
+        {% endif %}
         {% if post.arxiv %}
-        <a href="{{post.arxiv}}">arxiv</a> /
+        <a href="{{post.arxiv}}">arxiv</a>
+        {% endif %}
+        {% if post.arxiv and post.video%}
+        /
         {% endif %}
         {% if post.video %}
-        <a href="{{post.video}}">video</a> /
+        <a href="{{post.video}}">video</a>
+        {% endif %}
+        {% if post.video and post.code%}
+        /
         {% endif %}
         {% if post.code %}
-        <a href="{{post.code}}">code</a> /
+        <a href="{{post.code}}">code</a>
+        {% endif %}
+        {% if post.code and post.demo %}
+        /
+        {% endif %}
+        {% if post.demo %}
+        <a href="{{post.demo}}">demo</a>
+        {% endif %}
+        {% if post.demo and post.poster %}
+        /
         {% endif %}
         {% if post.poster %}
-        <a href="{{post.poster}}">poster</a> /
+        <a href="{{post.poster}}">poster</a>
+        {% endif %}
+        {% if post.poster and post.slides %}
+        /
         {% endif %}
         {% if post.slides %}
-        <a href="{{post.slides}}">slides</a> /
+        <a href="{{post.slides}}">slides</a>
         {% endif %}
         <p></p>
         {{ post.excerpt }}

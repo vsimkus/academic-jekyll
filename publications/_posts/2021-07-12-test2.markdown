@@ -5,5 +5,13 @@ image: /publications/images/project-image.jpg
 author: "John Doe"
 authors: "<strong>John Doe</strong>"
 venue: "Venue"
+bib: |
+  @article{Doe2021,
+    author = {Doe J.},
+    journal = {A journal of imaginary research},
+    title = {Another title of the publication},
+    year = {2021}
+  }
+
 ---
 Brief description of another project.
