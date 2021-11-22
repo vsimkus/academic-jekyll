@@ -6,9 +6,12 @@
     </div>
 </div>
 {% for post in publication_posts %}
-<div class="row py-2">
-    <div class="col-md-2 col-sm-12" align="center">
-        <img class="project-thumbnail" src="{{site.baseurl}}/tn{{post.image}}" alt="project image" />
+<div class="row py-2 publication">
+    <div class="col-md-2 col-sm-12 project-thumbnail-parent" align="center">
+        <img class="project-thumbnail {% if post.image_onhover %} pre-hover {% endif %}" src="{{site.baseurl}}/tn{{post.image}}" alt="project image" />
+        {% if post.image_onhover %}
+        <img class="project-thumbnail post-hover" src="{{site.baseurl}}/tn{{post.image_onhover}}" alt="project image" style="display: none;"/>
+        {% endif %}
     </div>
     <div class="col-md-10 col-sm-12 project-description">
         <h3>{{post.title}}</h3>
