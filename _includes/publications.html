@@ -21,13 +21,14 @@
         <br>
         <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
         <br>
+        {% assign need_separator = false %}
         {% if post.page_url %}
+        {% assign need_separator = true %}
         <a href="{{post.page_url}}">url</a>
         {% endif %}
-        {% if post.page_url and post.bib%}
-        /
-        {% endif %}
         {% if post.bib %}
+        {% if need_separator %} / {% endif %}
+        {% assign need_separator = true %}
         <a href="" data-toggle="modal" data-target="#publicationBibModal{{forloop.index}}">bib</a>
         <div class="modal fade" id="publicationBibModal{{forloop.index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -48,40 +49,34 @@
             </div>
         </div>
         {% endif %}
-        {% if post.bib and post.arxiv%}
-        /
-        {% endif %}
         {% if post.arxiv %}
+        {% if need_separator %} / {% endif %}
+        {% assign need_separator = true %}
         <a href="{{post.arxiv}}">arxiv</a>
         {% endif %}
-        {% if post.arxiv and post.video%}
-        /
-        {% endif %}
         {% if post.video %}
+        {% if need_separator %} / {% endif %}
+        {% assign need_separator = true %}
         <a href="{{post.video}}">video</a>
         {% endif %}
-        {% if post.video and post.code%}
-        /
-        {% endif %}
         {% if post.code %}
+        {% if need_separator %} / {% endif %}
+        {% assign need_separator = true %}
         <a href="{{post.code}}">code</a>
         {% endif %}
-        {% if post.code and post.demo %}
-        /
-        {% endif %}
         {% if post.demo %}
+        {% if need_separator %} / {% endif %}
+        {% assign need_separator = true %}
         <a href="{{post.demo}}">demo</a>
         {% endif %}
-        {% if post.demo and post.poster %}
-        /
-        {% endif %}
         {% if post.poster %}
+        {% if need_separator %} / {% endif %}
+        {% assign need_separator = true %}
         <a href="{{post.poster}}">poster</a>
         {% endif %}
-        {% if post.poster and post.slides %}
-        /
-        {% endif %}
         {% if post.slides %}
+        {% if need_separator %} / {% endif %}
+        {% assign need_separator = true %}
         <a href="{{post.slides}}">slides</a>
         {% endif %}
         <p></p>
