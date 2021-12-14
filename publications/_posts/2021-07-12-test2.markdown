@@ -2,6 +2,7 @@
 title:  "Another title of the publication"
 date:   2021-07-12 09:26:00 +00:00
 image: /publications/images/project-image.jpg
+image_onhover: /publications/images/project-image-on-hover.jpg
 author: "John Doe"
 authors: "<strong>John Doe</strong>"
 venue: "Venue"

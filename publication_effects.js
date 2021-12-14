@@ -20,3 +20,22 @@ $('div.publication').hover(
             }
         }
     });
+
+$('button.copy-btn').click(function(){
+    var parent = $(this).parent();
+    var modal = $(parent).parent();
+    var bibTxt = $(modal).find('.bib-text');
+    if (bibTxt.length != 0) {
+        var bib = $(bibTxt[0]).text().trim();
+
+        navigator.clipboard.writeText(bib);
+
+        // Show success alert
+        $(parent).prepend('<div class="alert alert-success" role="alert">Successfully copied to clipboard!</div>');
+        var alert = $(parent).find('.alert');
+        // Remove after 3s
+        setTimeout(function() {
+            alert.remove();
+        }, 3000);
+    }
+});
