@@ -65,6 +65,11 @@
         {% assign need_separator = true %}
         <a href="{{post.code}}">code</a>
         {% endif %}
+        {% if post.dataset %}
+        {% if need_separator %} / {% endif %}
+        {% assign need_separator = true %}
+        <a href="{{post.dataset}}">dataset</a>
+        {% endif %}
         {% if post.demo %}
         {% if need_separator %} / {% endif %}
         {% assign need_separator = true %}
