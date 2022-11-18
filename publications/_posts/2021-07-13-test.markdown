@@ -4,7 +4,7 @@ date:   2021-07-13 09:26:00 +00:00
 image: /publications/images/project-image.jpg
 image_onhover: /publications/images/project-image-on-hover.jpg
 author: "John Doe"
-authors: "<strong>John Doe</strong>"
+authors: "<strong><a href='https://vsimkus.github.io/academic-jekyll/'>John Doe</a></strong>"
 venue: "Venue"
 bib: |
   @article{Doe2021,

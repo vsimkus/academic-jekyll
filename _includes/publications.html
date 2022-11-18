@@ -16,9 +16,10 @@
     <div class="col-md-10 col-sm-12 project-description">
         <h3>{{post.title}}</h3>
         <br>
-        {{post.authors}}
+        <div class="authors">
+            {{post.authors}}
+        </div>
 
-        <br>
         <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
         <br>
         {% assign need_separator = false %}

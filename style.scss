@@ -142,6 +142,21 @@ body {
   max-width: 850px;   
 }
 
+// Publications
+
+.publication {
+  .authors {
+    a {
+      color: #000000;
+    }
+    a:focus,
+    a:hover {
+      color: #f09228;
+      text-decoration: none;
+    }
+  }
+}
+
 // Bootstrap-specific
 
 body {
