@@ -13,6 +13,7 @@ bib: |
     title = {Another title of the publication},
     year = {2021}
   }
-code: https://github.com/vsimkus/academic-jekyll
+links:
+  code: https://github.com/vsimkus/academic-jekyll
 ---
 Brief description of another project.
