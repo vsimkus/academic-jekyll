@@ -59,7 +59,7 @@
             {% endfor %}
         {% endif %}
         <p></p>
-        {{ post.excerpt }}
+        {{ post.excerpt | replace: '<p', '<p class="text-justify"' }}
     </div>
 </div>
 {% endfor %}
