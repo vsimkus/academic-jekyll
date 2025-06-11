@@ -110,6 +110,8 @@ span.highlight {
 .project-thumbnail-parent {
   display: grid;
   grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
 
   .project-thumbnail {
     width: auto; 
